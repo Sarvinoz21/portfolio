@@ -1,0 +1,531 @@
+@import "normalizes.scss"
+@import "resets.scss"
+
+$color-blue: #127BD7
+$color-blue2: #DFEFFC
+$color-black: #292929
+
+
+// font-family: 'Fira Sans', sans-serif
+// font-family: 'Montserrat', sans-serif;
+@font-face
+  font-family: 'MontserratT'
+  src: url('../font/Montserrat-Regular.ttf')
+  font-style: normal
+  font-weight: regular
+  font-display: swap
+
+@font-face
+  font-family: 'MontserratT'
+  src: url('../font/Montserrat-SemiBold.ttf')
+  font-style: normal
+  font-weight: bold
+  font-display: swap
+
+html
+  font-family: 'Montserrat', sans-serif
+  font-weight: regular
+  color: $color-black
+body
+  padding: 0 10px
+img
+  max-width: 100%
+  height: auto
+a
+  text-decoration: none
+*
+  box-sizing: border-box
+.container
+    max-width: 943px
+    margin: 0 auto
+.header
+  padding-top: 20px
+  margin-bottom: 176px
+.header-flex
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  &__block
+    vertical-align: middle
+  &__logo
+    vertical-align: middle
+  &__phone
+    background-image: url("../img/phone.svg")
+    background-repeat: no-repeat
+    display: inline-block
+    width: 34px
+    height: 43px
+    vertical-align: middle
+    margin-right: 31px
+
+.header-block
+  &__name
+    font-family: 'Fira Sans', sans-serif
+    color: $color-blue
+    font-weight: bold
+    font-size: 36px
+    text-transform: uppercase
+  &__tel
+    font-family: 'Fira Sans', sans-serif
+    font-size: 20px
+    color: $color-black
+
+.about
+  margin-bottom: 239px
+.about-container
+  background-image: url('../img/fon.png')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  min-height: 374px
+  position: relative
+.about-block
+  position: absolute
+  right: 0
+.about-two
+  max-width: 388px
+  border-radius: 15px
+  padding-top: 35px
+  backdrop-filter: blur(16px)
+  &__wrapper
+    padding-left: 17px
+  &__span
+    font-weight: 600
+  &__title
+    font-size: 24px
+    margin-bottom: 12px
+    line-height: 1.5
+  &__link
+    position: relative
+    margin-bottom: 32px
+    padding-left: 40px
+  &__list
+    font-size: 16px
+    font-weight: 600
+    margin-bottom: 8px
+    &:last-child
+      margin-bottom: 0
+    &::before
+      background-image: url("../img/vector.svg")
+      background-repeat: no-repeat
+      content: ""
+      display: block
+      width: 16px
+      height: 13.2px
+      position: absolute
+      left: 0
+  &__mini
+    text-align: center
+  &__button
+    display: inline-block
+    background-color: $color-blue
+    padding: 20px 50px
+    border-radius: 8px
+    color: #fff
+    font-weight: 600
+    font-size: 20px
+    margin-bottom: 8px
+    cursor: pointer
+
+
+.title
+  font-family: 'Fira Sans', sans-serif
+  font-weight: 700
+  font-size: 36px
+  color: black
+  text-transform: uppercase
+  text-align: center
+.choice
+  background: $color-blue2
+  padding-top: 28px
+  margin-bottom: 100px
+  &__title
+    margin-bottom: 39px
+  &__block
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    padding-left: 30px
+.choice-block
+  &__mini
+    background: #5b859257
+    width: calc( 100% / 3 - 30px)
+    margin-right: 30px
+    margin-bottom: 30px
+    border-radius: 40px
+    text-align: center
+    box-shadow: 10px 10px 10px rgba(131, 161, 196, 0.5)
+  &_icon
+    margin: 0 auto
+    width: 94px
+    height: 94px
+    margin-bottom: 30px
+  &__text
+    font-weight: 700
+    color: $color-blue
+    font-size: 20px
+    line-height: 1.4
+    margin-bottom: 35px
+  &__one
+    background-image: url("../img/icon1.svg")
+  &__two
+    background-image: url("../img/icon2.svg")
+  &__three
+    background-image: url("../img/icon3.svg")
+  &__four
+    background-image: url("../img/icon4.svg")
+  &__five
+    background-image: url("../img/icon5.svg")
+  &__six
+    background-image: url("../img/icon6.svg")
+
+.services
+  margin-bottom: 100px
+  &__title
+    margin-bottom: 67px
+  &__flex
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 45px
+  &__option
+    padding: 28px 0
+    box-shadow: 0 -5px 47px rgba(116, 154, 185, 0.2)
+    width: calc(100% / 2 - 30px)
+    border-radius: 8px
+    position: relative
+    font-size: 18px
+    margin-right: 30px
+    margin-bottom: 15px
+    padding-left: 11px
+    position: relative
+    cursor: pointer
+    &:active
+      box-shadow: 10px 0px 10px rgba(14, 17, 20, 0.2)
+    &_list
+      position: absolute
+      display: none
+      right: -230px
+      top: 0px
+      background: #ffffff
+      z-index: 1
+      padding: 17px 49px
+      box-shadow: inset 0 -5px 47px rgba(116, 154, 185, 0.2)
+    &_link
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+    &:active .services__option_list
+      display: block
+    &:before
+      content:""
+      background-image: url("../img/str.svg")
+      background-repeat: no-repeat
+      display: block
+      width: 7px
+      height: 15px
+      position: absolute
+      right: 11px
+.btn
+  &__color
+    background: white
+    color: $color-blue
+    border: 2px solid $color-blue
+
+
+.slick-initialized .slick-slide 
+  display: flex
+.sale
+  margin-bottom: 100px
+  &__title
+    margin-bottom: 67px
+  &__item
+    box-shadow: -6px -5px 58px rgba(131,161,196,0.5)
+    border-radius: 80px
+    padding: 34px 70px 34px 2px
+  &__item-mini
+    align-self: center
+  &__item-subtitle
+    font-weight: 700
+    font-size: 24px
+    width: 78%
+  &__item-star
+    font-size: 14px
+  &__item-text
+    font-size: 36px
+    color: $color-blue
+    font-weight: 700
+    margin-bottom: 25px
+  &__item-span
+    font-weight: normal
+    display: block
+    color: #292929
+    font-size: 24px
+    text-decoration: line-through
+.slick-next
+  right: 25px
+
+.trust
+  margin-bottom: 100px
+  &__title
+    margin-bottom: 50px
+  &__text
+    line-height: 2
+  &__block
+    position: relative
+    display: flex    
+  &__block-mini
+    max-width: 365px
+    width: calc(100% / 2)        
+    position: relative
+  &__block-img
+    &_one
+      background-repeat: no-repeat
+      width: 320px
+      height: 320px
+      display: block
+      position: absolute
+      z-index: -1
+      top: 152px
+.image
+  &__info
+    position: absolute
+    top: 174px
+    left: 63px
+  &__info-text
+    margin-bottom: 10px
+    font-size: 18px
+    font-style: italic
+    &:last-child
+      margin-bottom: 0
+  &__info-author
+    font-size: 15px
+  &__info-span
+    font-weight: 700
+
+
+.doctors
+  background-color: $color-blue2
+  padding-top: 28px
+  margin-bottom: 85px
+  padding-bottom: 20px
+  &__title
+    margin-bottom: 38px
+  &__galery
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 184px)
+.six
+  grid-row-start: 3
+  grid-row-end: 2
+  grid-column-start: 3
+
+.record
+  margin-bottom: 100px
+  &__block
+    display: flex
+    background: #BFDEFA
+    border-radius: 60px
+    padding: 69px 30px 50px 66px
+  &__block-elements
+    margin-right: 50px
+    &_one
+      max-width: 368px 
+  &__title
+    margin-bottom: 38px
+  &__form-input
+    background: #BFDEFA
+    border: none
+    border-bottom: 2px solid #5F6265
+    outline: none
+    display: block
+    margin-bottom: 38px
+    width: 80%
+    &:last-child
+      margin-bottom: 0
+  &__button
+    border: none
+  &__info
+    font-size: 12px
+
+.contacts
+  margin-bottom: 49px
+  &__title
+    margin-bottom: 68px
+  &__flex
+    display: flex
+    flex-direction: row
+  &__tel
+    display: block
+    font-size: 24px
+    color: #4C4C4C
+    margin-bottom: 32px
+    padding-top: 30px
+  &__block-mail
+    display: block
+    margin-bottom: 15px
+    font-size: 18px
+  &__block-text
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+  &__block-map
+    border-radius: 15px
+
+
+.footer 
+  background: $color-blue
+  color: #fff
+  padding: 49px 0 60px 0
+  &__flex
+    display: flex
+    flex-wrap: wrap
+  &__block-num
+    width: 57%
+    font-size: 16px
+    line-height: 1.4
+    margin-bottom: 33px
+  &__block-text
+    font-size: 14px
+  &__block-tit
+    width: 53%
+  &__block-title
+    text-align: center
+    line-height: 1.4
+    font-weight: 600
+    font-size: 22px
+  &__tel
+    color: #fff
+    display: block
+    margin-bottom: 5px
+    font-weight: 700
+  &__mail
+    display: block
+    color: #fff
+    margin-bottom: 21px
+  &__social-insta
+    background-image: url("../img/icon-insta.svg")
+    background-repeat: no-repeat
+    display: inline-block
+    width: 56px
+    height: 55px
+    margin-right: 32px
+  &__social-whats
+    background-image: url("../img/icon-what.svg")
+    background-repeat: no-repeat
+    display: inline-block
+    width: 56px
+    height: 55px
+
+@media (max-width: 960px)
+  .header
+    margin-bottom: 100px
+  .header-flex
+    flex-direction: column
+  .about
+    margin-bottom: 150px
+  .about-container
+    max-width: 850px
+
+@media (max-width: 910px)
+  .trust
+    &__block-img
+      &_one
+        top: 90px
+      &_two
+        width: 260px
+  .doctors
+    padding-bottom: 0
+    &__galery
+      grid-template-columns: repeat(3,1fr)
+      grid-template-rows: repeat(2,306px)
+  .four
+    grid-row-start: 1
+    grid-row-end: 2
+    grid-column-start: 1
+  .contacts
+    &__title
+      margin-bottom: 25px
+    &__flex
+      display: block
+      text-align: center
+    &__block
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+
+@media (max-width: 861px)
+  .about-container
+    max-width: 700px
+  .choice-block
+    &__mini
+      width: calc(100% / 2 - 30px)
+@media (max-width: 720px)
+  .about-container
+    max-width: 550px
+  .services
+    &__flex
+      text-align: center
+    &__option
+      width: calc(100% - 30px)
+      &_list
+        width: 100%
+        right: 0px
+        top: 75px
+  .doctors
+    &__galery
+      display: block
+      text-align: center
+    &__galery-element
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+  .contacts
+    &__block-map
+      max-width: 515px
+  .footer
+    &__flex
+      display: block
+      text-align: center
+    &__block-num
+      width: 100%
+    &__block-tit
+      width: 100%
+      margin-bottom: 10px
+@media (max-width: 560px)
+  .title
+    font-size: 30px
+  .about-container
+    max-width: 450px
+  .choice-block
+    &__mini
+      width: calc(100% - 30px)
+  .sale
+    &__item-img
+      display: none
+  .trust
+    &__block-img_two
+      display: none
+  .contacts
+    &__block-map
+      max-width: 400px
+  .trust  
+    margin-bottom: 400px
+    &__block-img_one
+      top: 29px
+      left: 71px
+    &__block
+      display: block
+  .image__info 
+    top: 54px
+    width: 100%
+    left: 110px
+@media (max-width: 475px)
+  .header-flex
+    text-align: center
+  .sale
+    display: none
+  .record__block
+    display: block
+  .image__info-text 
+    font-size: 16px
